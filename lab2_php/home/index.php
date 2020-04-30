@@ -16,7 +16,7 @@
 		<br>
 		<a  onclick="location.href='sign_in.php'"><h2>登录</h2></a>
 		<br>
-		<a  onclick="location.href='administrator.php'"><h2>管理员模式</h2></a>
+		<a  onclick="location.href='../administrator.php'"><h2>管理员模式</h2></a>
 		<br>
 	</div>
 </body>

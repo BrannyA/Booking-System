@@ -25,11 +25,11 @@
         ////继续写操作
     ?>
       -->
-    <br>
-    <a  onclick="location.href='index.php'"><h2>返回主页</h2></a>
+    <!-- <br>
+    <a  onclick="location.href='../home/index.php'"><h2>返回主页</h2></a> -->
 
     <br>
-    <a  onclick="location.href='service.php'"><h2>返回服务页</h2></a>
+    <a  onclick="location.href='../search/service.php'"><h2>返回服务页</h2></a>
     <br>
     <a  onclick="location.href='service_8.php'"><h2>返回需求8查找页</h2></a>
 </body>
