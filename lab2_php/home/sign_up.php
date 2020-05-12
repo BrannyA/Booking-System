@@ -14,7 +14,7 @@
 		<input type="text" name="UID">
 		<br>
 		用户名:<br>
-		<input type="text" name="Username">
+		<input type="text" name="username">
 		<br>
 		手机号:<br>
 		<input type="text" name="Phone">

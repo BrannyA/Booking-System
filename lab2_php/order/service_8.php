@@ -23,7 +23,7 @@
     <p>如果您点击提交，表单数据会被发送到名为search_for_order.php的页面。</p>
 
     <br>
-    <a  onclick="location.href='index.php'"><h2>返回主页</h2></a>
+    <a  onclick="location.href='../home/index.php'"><h2>退出登录</h2></a>
 
     <br>
     <a  onclick="location.href='service.php'"><h2>返回服务页面</h2></a>

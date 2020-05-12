@@ -18,6 +18,7 @@
 			<input type="submit" value="Submit">
 		</form>
 		<a onclick="location.href='index.php'" class="text"><p>返回主页</p></a>
+		<a onclick="location.href='../admin/administrator.php'" class="text"><p>管理员模式</p></a>
 	</div>
 	<!-- <font color="white">如果您点击提交，表单数据会被发送到名为service.php的页面。</font> -->
 

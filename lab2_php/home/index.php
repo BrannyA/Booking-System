@@ -6,6 +6,7 @@
 <body>
 
 	<h1 align="center">欢迎使用火车订票系统!</h1>
+	<?php	session_destroy(); ?>
 	<div>
 		<h2><br>请选择下列任意一项:</h2>
 	</div>
@@ -16,7 +17,7 @@
 		<br>
 		<a  onclick="location.href='sign_in.php'"><h2>登录</h2></a>
 		<br>
-		<a  onclick="location.href='../administrator.php'"><h2>管理员模式</h2></a>
+		<a  onclick="location.href='../admin/administrator.php'"><h2>管理员模式</h2></a>
 		<br>
 	</div>
 </body>

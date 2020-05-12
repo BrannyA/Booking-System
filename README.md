@@ -1,5 +1,42 @@
 # Booking-System
-DBMS Lab
+A train ticket booking System
 
-## 更新日志
-2020/04/30 php基本框架完成(还没有测试qvq)，美化了登陆页面，明晚meeting
+## Screenshots
+update later ...
+
+
+## Usage
+#### Requirements
+postgresql10, apache2, php5.6
+
+#### Start and login postgresql
+        $ sudo service postgresql start
+        $ sudo -u postgres psql
+        postgres=# create user root with createdb superuser <br> createrole login;
+        postgres=# create database root owner root;
+        postgres=# \q  
+
+#### Set password, add login config and restart the service
+      $ service postgresql start
+      $ su  postgres   
+      $ psql -U postgres   
+      postgres=# ALTER USER dbms WITH PASSWORD 'dbms';
+      postgres=# \q  
+      # vi /etc/postgresql/10/main/pg_hba.conf
+      -> # TYPE  DATABASE        USER            ADDRESS                 METHOD
+      -> local   all             dbms                                    md5
+      # service postgresql restart
+#### create database, create tables and import data
+        $ psql  <br>
+        root=# create database tpch;
+        CREATE DATABASE
+        root=# \q
+        $ psql -d tpch
+        tpch=# <enter create table statements>
+        tpch=# <enter statements to copy data> (see db.sql)
+Start server `$ sudo service apache2 start` and visit URL  `http://localhost:8080/`
+
+
+## (虚假的)更新日志
+2020/04/30 php基本框架完成(还没有测试qvq)，美化了登陆页面，明晚meeting <br>
+2020/05/13 基本上都阔以啦哈哈哈哈哈哈哈开心，这么丑的代码一定不是我写的（逃 <br>
