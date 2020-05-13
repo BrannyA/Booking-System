@@ -1,0 +1,51 @@
+@charset "utf-8";
+body{
+    background-color: #ffffff;
+    color: #555555;
+    background-image:url(../image/background_pic2.jpg);
+    background-position: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+h1{
+    color: ghostwhite;
+}
+
+.box1{
+    background-color: ghostwhite;
+    color: dodgerblue;
+    font-size: 16px;
+    border: 10px dodgerblue;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.container{
+    width: 30%;
+    margin: auto;
+}
+
+h2:hover{
+    background-color:  slateblue;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #3742fa;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+.text{
+  color: dodgerblue;
+  font-size: 12pt;
+  text-decoration: underline;
+  align: center;
+}

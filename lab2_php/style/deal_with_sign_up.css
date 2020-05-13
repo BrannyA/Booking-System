@@ -1,0 +1,43 @@
+body{
+    background-color: #ffffff;
+    color: #555555;
+    background-image:url(../image/background_pic.jpg);
+    background-position: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.box1{
+    background-color: ghostwhite;
+    color: dodgerblue;
+    font-size: 16px;
+    border: 10px dodgerblue;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.container{
+    width: 60%;
+    margin: auto;
+}
+
+h1{
+    font-size:30px;
+    color:#ffffff;
+}
+
+button{
+    color:dodgerblue;
+    margin-top: 20px;
+    height: 50px;
+}
+
+button:hover{
+    background-color:  #ffffff;
+}
+
+button:active{
+    background-color: #ffffff;
+}

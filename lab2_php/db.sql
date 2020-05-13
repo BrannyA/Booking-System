@@ -1,11 +1,3 @@
-su - postgres
-
-psql
-
-CREATE DATABASE lab2 OWNER root;
-
-GRANT ALL PRIVILEGES ON DATABASE lab2 to root;
-
 CREATE TYPE se_type as enum
 (
     '硬卧上铺','硬卧中铺','硬卧下铺','软卧上铺','软卧下铺','硬座','软座'
@@ -67,7 +59,7 @@ create table TrainUser( U_user_name     varchar(20) not null,
 				   primary key(U_user_name)
                  );
 
-create table Reservation ( R_ID                 varchar(30) primary key,
+create table Reservation ( R_ID                 varchar(50) primary key,
                            R_status             Res_status not null,
 						   R_start_date         date not null,
 						   R_book_date          date not null,
@@ -83,26 +75,31 @@ create table Reservation ( R_ID                 varchar(30) primary key,
 						   foreign key (R_TrainID) references Train(ID)
                          );
 
+chmod 777 /var/www/html/lab2_fin/data/station-data.csv
+chmod 777 /var/www/html/lab2_fin/data/train-data.csv
+chmod 777 /var/www/html/lab2_fin/data/pass-data.csv
+chmod 777 /var/www/html/lab2_fin/data/ticket-data.csv
+
 COPY Station
 
-FROM '/home/dbms/lab2_php/data/station-data.csv'
+FROM '/var/www/html/lab2_fin/data/station-data.csv'
 
 WITH (FORMAT csv);
 
 COPY Train
 
-FROM '/var/www/html/lab2_php_new/data/train-data.csv'
+FROM '/var/www/html/lab2_fin/data/train-data.csv'
 
 WITH (FORMAT csv);
 
 COPY Ticket
 
-FROM '/var/www/html/lab2_php_new/data/ticket-data.csv'
+FROM '/var/www/html/lab2_fin/data/ticket-data.csv'
 
 WITH (FORMAT csv);
 
 COPY Pass
 
-FROM '/var/www/html/lab2_php_new/data/pass-data.csv'
+FROM '/var/www/html/lab2_fin/data/pass-data.csv'
 
 WITH (FORMAT csv);
