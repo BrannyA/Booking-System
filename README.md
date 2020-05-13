@@ -2,7 +2,7 @@
 A train ticket booking System
 
 ## Screenshots
-update later ...
+![Home Page](https://github.com/BrannyA/Booking-System/blob/master/screenshot/home.png)
 
 
 ## Usage
@@ -41,4 +41,4 @@ Start server `$ sudo service apache2 start` and visit URL  `http://localhost:808
 ## (虚假的)更新日志
 2020/04/30 php基本框架完成(还没有测试qvq)，美化了登陆页面，明晚meeting <br>
 2020/05/13 01:30 基本上都阔以啦哈哈哈哈哈哈哈开心，这么丑的代码一定不是我写的（逃 <br>
-2020/05/13 23:45 修好了一些小bug，美化页面
+2020/05/13 23:45 修好了一些小bug，美化页面 <br>
