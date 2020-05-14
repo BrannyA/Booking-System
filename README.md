@@ -17,7 +17,7 @@ postgresql10, apache2, php5.6
         postgres=# create database root owner root;
         postgres=# \q  
 
-#### create database, create tables and import data
+#### Create database, create tables and import data
         $ psql 
         root=# create database tpch;
         CREATE DATABASE
@@ -26,12 +26,10 @@ postgresql10, apache2, php5.6
         tpch=# <enter create table statements>
         tpch=# <enter statements to copy data> (see db.sql)
 
-#### Set password, add login config and restart the service
-      $ service postgresql start
-      $ su  postgres   
-      $ psql -U postgres   
-      tpch=# ALTER USER dbms WITH PASSWORD 'dbms';
-      tpch=# \q  
+#### Set password, add login config and restart the service 
+      $ psql    
+      root=# ALTER USER dbms WITH PASSWORD 'dbms';
+      root=# \q  
       # vi /etc/postgresql/10/main/pg_hba.conf
       -> # TYPE  DATABASE        USER            ADDRESS                 METHOD
       -> local   all             dbms                                    md5
