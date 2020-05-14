@@ -75,10 +75,6 @@ create table Reservation ( R_ID                 varchar(50) primary key,
 						   foreign key (R_TrainID) references Train(ID)
                          );
 
-chmod 777 /var/www/html/lab2_fin/data/station-data.csv
-chmod 777 /var/www/html/lab2_fin/data/train-data.csv
-chmod 777 /var/www/html/lab2_fin/data/pass-data.csv
-chmod 777 /var/www/html/lab2_fin/data/ticket-data.csv
 
 COPY Station
 

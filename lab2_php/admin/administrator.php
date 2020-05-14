@@ -30,7 +30,7 @@
 					from Reservation
 					where R_status='已确认订单'
 					group by R_TrainID
-					order by Number;
+					order by Number desc;
 				";
 				$users = "
 					select * from TrainUser;

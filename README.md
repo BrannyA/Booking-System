@@ -17,16 +17,6 @@ postgresql10, apache2, php5.6
         postgres=# create database root owner root;
         postgres=# \q  
 
-#### Set password, add login config and restart the service
-      $ service postgresql start
-      $ su  postgres   
-      $ psql -U postgres   
-      postgres=# ALTER USER dbms WITH PASSWORD 'dbms';
-      postgres=# \q  
-      # vi /etc/postgresql/10/main/pg_hba.conf
-      -> # TYPE  DATABASE        USER            ADDRESS                 METHOD
-      -> local   all             dbms                                    md5
-      # service postgresql restart
 #### create database, create tables and import data
         $ psql 
         root=# create database tpch;
@@ -35,6 +25,18 @@ postgresql10, apache2, php5.6
         $ psql -d tpch
         tpch=# <enter create table statements>
         tpch=# <enter statements to copy data> (see db.sql)
+
+#### Set password, add login config and restart the service
+      $ service postgresql start
+      $ su  postgres   
+      $ psql -U postgres   
+      tpch=# ALTER USER dbms WITH PASSWORD 'dbms';
+      tpch=# \q  
+      # vi /etc/postgresql/10/main/pg_hba.conf
+      -> # TYPE  DATABASE        USER            ADDRESS                 METHOD
+      -> local   all             dbms                                    md5
+      # service postgresql restart
+
 Start server `$ sudo service apache2 start` and visit URL  `http://localhost:8080/`
 
 
@@ -42,3 +44,4 @@ Start server `$ sudo service apache2 start` and visit URL  `http://localhost:808
 2020/04/30 php基本框架完成(还没有测试qvq)，美化了登陆页面，明晚meeting <br>
 2020/05/13 01:30 基本上都阔以啦哈哈哈哈哈哈哈开心，这么丑的代码一定不是我写的（逃 <br>
 2020/05/13 23:45 修好了一些小bug，美化页面 <br>
+2020/05/14 验收完成~感谢各位大佬╭(●｀∀´●)╯╰(●’◡’●)╮
